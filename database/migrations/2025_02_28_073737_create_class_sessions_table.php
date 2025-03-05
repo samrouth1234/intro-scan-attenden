@@ -11,14 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('sessions', function (Blueprint $table) {
+        Schema::create('class_sessions', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('class_id')->constrained()->onDelete('cascade');
+            $table->foreignId('teaching_class_id')->constrained('classes')->onDelete('cascade'); // Change class_id to teaching_class_id
             $table->string('session_token')->unique();
             $table->date('session_date');
             $table->boolean('is_active')->default(true);
             $table->timestamps();
-        });
+        });        
     }
 
     /**

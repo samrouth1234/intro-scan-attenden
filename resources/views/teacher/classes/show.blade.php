@@ -18,7 +18,7 @@
                 <div>
                     <p class="mb-1 fw-medium">{{ $session->session_date->format('M d, Y H:i') }}</p>
                     <p class="text-muted small mb-0">
-                        Attendance: {{ $session->attendances->count() }} students
+                        <!-- Attendance: {{ $session->attendances->count() }} students -->
                     </p>
                 </div>
                 <div class="d-flex gap-2">

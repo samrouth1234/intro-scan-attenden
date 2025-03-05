@@ -16,7 +16,7 @@ class ClassSession extends Model
     // Relationship: A session belongs to a TeachingClass
     public function teachingClass()
     {
-        return $this->belongsTo(TeachingClass::class, 'class_id');
+        return $this->belongsTo(TeachingClass::class, 'teaching_class_id');
     }
 
     // Relationship: A session can have many attendances

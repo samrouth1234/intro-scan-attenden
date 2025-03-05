@@ -32,14 +32,14 @@ Route::middleware(['auth:teacher'])->prefix('teacher')->group(function () {
   Route::resource('classes', ClassController::class);
 
   // Session Management
-  Route::post('classes/{class}/class_sessions', [SessionController::class, 'store'])
-    ->name('class_sessions.store');
-  Route::patch('class_sessions/{session}/end', [SessionController::class, 'endSession'])
-    ->name('class_sessions.end');
+  Route::post('classes/{class}/sessions', [SessionController::class, 'store'])
+    ->name('sessions.store');
+  Route::patch('sessions/{session}/end', [SessionController::class, 'endSession'])
+    ->name('sessions.end');
 
   // Attendance Reports
-  Route::get('class_sessions/{session}/attendance', [SessionController::class, 'showAttendance'])
-    ->name('class_sessions.attendance');
+  Route::get('sessions/{session}/attendance', [SessionController::class, 'showAttendance'])
+    ->name('sessions.attendance');
 });
 
 // Student Authentication Routes

@@ -14,6 +14,6 @@ class TeachingClass extends Model
     }
 
     public function sessions() {
-        return $this->hasMany(ClassSession::class, 'class_id');
+        return $this->hasMany(ClassSession::class, 'teaching_class_id');
     }
 }
